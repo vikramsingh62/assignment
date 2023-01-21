@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "e6b2f2a3-cb8d-47ea-937f-6f991ca05d67",
+		"name": "Banking-Mock-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25417689"
+	},
+	"item": [
+		{
+			"name": "create_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"VikramS\",\r\n    \"last_name\": \"Singh\",\r\n    \"email\": \"Vsingh@banking.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/create_user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"create_user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create_user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-match-request-body",
+								"value": "true",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Vikram\",\r\n    \"last_name\": \"Singh\",\r\n    \"email\": \"Vsingh@banking.com\",\r\n    \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://865d5e25-110a-4108-802f-3af35b1a5f3c.mock.pstmn.io/create_user",
+							"protocol": "https",
+							"host": [
+								"865d5e25-110a-4108-802f-3af35b1a5f3c",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"create_user"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"message\": \"User created successfully\",\r\n    \"Reference_number\": {{$guid}}\r\n    \"user_id\"  : \"vsingh62\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "get_balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}?account_no=987654321",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "account_no",
+							"value": "987654321"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get_balance",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-match-request-body",
+								"value": "true",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"account-no\" :123456789\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Balance retrieved successfully\",\n    \"balance\": 1000,\n    \"currency\": \"USD\"\n}"
+				},
+				{
+					"name": "get_balance-of-non-existing-user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}?account_no=987654321",
+							"host": [
+								"{{url}}"
+							],
+							"query": [
+								{
+									"key": "account_no",
+									"value": "987654321"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"error\",\r\n    \"message\": \"Account number provided does not exist\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "deposit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/deposit?amount=1000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"deposit"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "deposit",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-match-request-body",
+								"value": "true",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 1000,\r\n    \"transaction_pin\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/deposit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deposit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "\r\n{\r\n    \"status\": \"success\",\r\n    \"message\": \"Balance retrieved successfully\",\r\n    \"balance\": 1000,\r\n    \"currency\": \"USD\"\r\n    \"transaction_id\" : {{$timestamp}} \r\n}"
+				},
+				{
+					"name": "deposit-money-exceeding-the-limit",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 50000,\r\n    \"transaction_pin\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/deposit?amount=1000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deposit"
+							],
+							"query": [
+								{
+									"key": "amount",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"error\",\r\n    \"message\": \"Deposit amount exceeds the maximum limit\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "withdraw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 1000,\r\n    \"transaction_pin\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/withdraw?account-no=123456789",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"withdraw"
+					],
+					"query": [
+						{
+							"key": "account-no",
+							"value": "123456789"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "withdraw",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 1000,\r\n    \"transaction_pin\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/withdraw?account-no=123456789    ",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"withdraw"
+							],
+							"query": [
+								{
+									"key": "account-no",
+									"value": "123456789    "
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"message\": \"Withdrawal of $1000 was successful\",\r\n    \"transaction_id\": {{$randomInt}}\r\n}"
+				},
+				{
+					"name": "withdraw-when-amount-exceeding-userbalance",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 1000,\r\n    \"transaction_pin\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/withdraw?account-no=123456789",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"withdraw"
+							],
+							"query": [
+								{
+									"key": "account-no",
+									"value": "123456789"
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"error\",\r\n    \"message\": \"Insufficient funds in the account\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/send",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"send"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "send",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sender_account_number\": \"1234567890\",\r\n    \"recipient_account_number\": \"0987654321\",\r\n    \"amount\": 1000,\r\n    \"transaction_pin\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/send",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"send"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"message\": \"Money transfer of $1000 was successful\",\r\n    \"transaction_id\": {{$randomInt}}\r\n}"
+				},
+				{
+					"name": "sending-money-to-non-existing-account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"sender_account_number\": \"1234567890\",\r\n    \"recipient_account_number\": \"456456456\",\r\n    \"amount\": 1000,\r\n    \"transaction_pin\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/send",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"send"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"error\",\r\n    \"message\": \"Account number provided does not exist\"\r\n}"
+				},
+				{
+					"name": "sending-money-when-insufficient-funds",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"sender_account_number\": \"1234567890\",\r\n    \"recipient_account_number\": \"0987654321\",\r\n    \"amount\": 1000,\r\n    \"transaction_pin\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/send",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"send"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "\r\n{\r\n    \"status\": \"error\",\r\n    \"message\": \"Insufficient funds in the account\"\r\n}"
+				}
+			]
+		}
+	]
+}

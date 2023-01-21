@@ -1,0 +1,87 @@
+Functional Test Cases:
+
+1. create_user:
+
+a. Test creating a new user with valid input data
+b. Test creating a new user with already existing user data
+c. Test creating a new user with less/more number of character than required
+
+2. Deposit:
+a. Test case with all the valid inputs
+b. Test making a deposit to a non-existent user
+d. Test depositing invalid(zeros or negative values) amount to account 
+e. Test depositing with missing required fields
+f. Test depositing amount exceeding maximum limit
+
+
+3. withdraw:
+
+a. Test making a withdrawal with valid input data
+b. Test making a withdrawal from a non-existent user
+c. Test making a withdrawal that exceeds the user's current balance
+d. Test making a withdrawal with an amount that is below the minimum allowed
+e. Test making a withdrawal with an amount that is above the maximum allowed
+f. Test making multiple consecutive withdrawals and ensuring that the user's balance is updated correctly after each one
+g. Test making a withdrawl with negative amount
+h. Test case for missing required fields 
+
+4. get_balance:
+
+a. Test checking the balance for a valid user
+b. Test checking the balance for a non-existent user
+c. Test checking the balance for a temp deactivated user
+d. Test checking the balance for a user who has not completed the account verification process
+e. Test checking the balance if account is locked
+f. Test checking the balance if the account is closed
+g. Test with missing required fields
+
+
+5. send:
+
+a. Test sending money with valid input data
+b. Test sending money to a non-existent user
+c. Test sending money that exceeds the sender's current balance
+d. Test sending money to a deactivated user
+e. Test sending money to a user who has not completed the account verification process
+f. Test sending money with an amount that is below the minimum allowed
+g. Test sending money with an amount that is above the maximum allowed
+
+
+Non-functional Test Cases:
+
+1. create_user:
+
+a. Test the API's performance with a high number of concurrent requests
+b. Test the API's response time under normal load
+c. Test the API's availability during peak traffic hours
+d. Soak testing the api
+
+
+2.deposit:
+
+a. Test the API's performance with a high number of concurrent requests
+b. Test the API's response time under normal load
+c. Test the API's availability during peak traffic hours
+
+
+3.withdraw:
+
+a. Test the API's performance with a high number of concurrent requests
+b. Test the API's response time under normal load
+c. Test the API's availability during peak traffic hours
+
+
+
+4.get_balance:
+
+a. Test the API's performance with a high number of concurrent requests
+b. Test the API's response time under normal load
+c. Test the API's availability during peak traffic hours
+
+
+5. send:
+
+a. Test the API's performance with a high number of concurrent requests
+b. Test the API's response time under normal load
+c. Test cases for security vulnerabilities 
+d. Test for multiple transaction in small duration

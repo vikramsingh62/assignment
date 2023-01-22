@@ -67,9 +67,9 @@ Note:
    and get the response later to verify the headers,response codes and other contents.
    
   Structure:
-  /APIs (contain all the methods which hit the API with the payload and retutn the response)
-    /create_user.py
-    /deposit.py
+  /APIs (contain all the methods which hit the API with the payload and retutn the response)\
+    /create_user.py\
+    /deposit.py\
     /get_balance.py
     /send.py
     /withdraw.py

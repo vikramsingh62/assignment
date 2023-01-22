@@ -68,23 +68,23 @@ Note:
    
   Structure:
    /APIs (contain all the methods which hit the API with the payload and retutn the response)\
-    /create_user.py\
-    /deposit.py\
-    /get_balance.py\
-    /send.py\
-    /withdraw.py\
+    &ensp/create_user.py\
+    &ensp/deposit.py\
+    &ensp/get_balance.py\
+    &ensp/send.py\
+    &ensp/withdraw.py\
    /Jsons(Contains all the jsons and payload required)\
-    /jsons.py\
+    &ensp/jsons.py\
    /TestCases (Contain all the test cases)\
-    /test_create_user.py\
-    /test_deposit\
-    /test_get_balance\
-    /test_send\
-    /test_withdraw\
+    &ensp/test_create_user.py\
+    &ensp/test_deposit\
+    &ensp/test_get_balance\
+    &ensp/test_send\
+    &ensp/test_withdraw\
    /TestData (contain all the endpints and variables\
-    /APIbase\
+    &ensp/APIbase\
    /Utility\
-    /utilities\
+    &ensp/utilities\
    /runner\
    
    # Installation

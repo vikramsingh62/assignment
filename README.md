@@ -66,25 +66,25 @@ Note:
    It uses request library, The library is a powerful and easy-to-use library for making HTTP requests in Python. It abstracts the complexities of making requests behind a simple API so that you can focus on interacting with the service you are requesting from.
    and get the response later to verify the headers,response codes and other contents.
    
-  Structure:
+  Structure:\
    /APIs (contain all the methods which hit the API with the payload and retutn the response)\
     &ensp;/create_user.py\
-    &ensp/deposit.py\
-    &ensp/get_balance.py\
-    &ensp/send.py\
-    &ensp/withdraw.py\
+    &ensp;/deposit.py\
+    &ensp;/get_balance.py\
+    &ensp;/send.py\
+    &ensp;/withdraw.py\
    /Jsons(Contains all the jsons and payload required)\
-    &ensp/jsons.py\
+    &ensp;/jsons.py\
    /TestCases (Contain all the test cases)\
-    &ensp/test_create_user.py\
-    &ensp/test_deposit\
-    &ensp/test_get_balance\
-    &ensp/test_send\
-    &ensp/test_withdraw\
+    &ensp;/test_create_user.py\
+    &ensp;/test_deposit\
+    &ensp;/test_get_balance\
+    &ensp;/test_send\
+    &ensp;/test_withdraw\
    /TestData (contain all the endpints and variables\
-    &ensp/APIbase\
+    &ensp;/APIbase\
    /Utility\
-    &ensp/utilities\
+    &ensp;/utilities\
    /runner\
    
    # Installation

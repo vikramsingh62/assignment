@@ -68,7 +68,7 @@ Note:
    
   Structure:
    /APIs (contain all the methods which hit the API with the payload and retutn the response)\
-    &ensp/create_user.py\
+    &ensp;/create_user.py\
     &ensp/deposit.py\
     &ensp/get_balance.py\
     &ensp/send.py\

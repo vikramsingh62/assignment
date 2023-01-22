@@ -68,25 +68,26 @@ Note:
    
   Structure:
   /APIs (contain all the methods which hit the API with the payload and retutn the response)\
+  \
     /create_user.py\
     /deposit.py\
-    /get_balance.py
-    /send.py
-    /withdraw.py
-   /Jsons(Contains all the jsons and payload required)
-    jsons.py
-   /TestCases (Contain all the test cases)
-    /test_create_user.py
-    /test_deposit
-    /test_get_balance
-    /test_send
-    /test_withdraw
-   /TestData (contain all the endpints and variables)
-    /APIbase
-   /Utility
-    /utilities
-   /runner
-   
+    /get_balance.py\
+    /send.py\
+    /withdraw.py\
+   /Jsons(Contains all the jsons and payload required)\
+    jsons.py\
+   /TestCases (Contain all the test cases)\
+    /test_create_user.py\
+    /test_deposit\
+    /test_get_balance\
+    /test_send\
+    /test_withdraw\
+   /TestData (contain all the endpints and variables\
+    /APIbase\
+   /Utility\
+    /utilities\
+   /runner\
+   \
    # Installation
    
    Installing Python

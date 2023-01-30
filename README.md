@@ -87,6 +87,8 @@ Note:
     &ensp;/utilities\
    /runner\
    
+   Note: You have to change the endpoints/URls in TestData/APIBase
+   
    # Installation
    
    Installing Python
